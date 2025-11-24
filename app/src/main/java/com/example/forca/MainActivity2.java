@@ -17,10 +17,12 @@ public class MainActivity2 extends AppCompatActivity {
 
     Button btnSair, btnA, btnB, btnC;
     ImageView cabeca;
+    int pontos=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main2);
 
         btnSair = findViewById(R.id.btnSair);
