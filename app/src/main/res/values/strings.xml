@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">forca</string>
+    <string name="titulo">FORCA</string>
+    <string name="bt1">INICIAR</string>
+    <string name="bt2">RANKING</string>
+    <string name="credito">By: @ruivo.exe</string>
+    <string name="quest1">C O M P U T A _ Ã O</string>
+</resources>

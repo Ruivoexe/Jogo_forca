@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/fundo"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="@color/contraste"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        />
+
+    <Button
+        android:id="@+id/btniniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt1"
+        android:textSize="22sp"
+        android:textColor="@color/fundo"
+        android:backgroundTint="@color/contraste"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt2"
+        android:textSize="22sp"
+        android:textColor="@color/fundo"
+        android:backgroundTint="@color/contraste"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credito"
+        android:textSize="18sp"
+        android:textColor="@color/contraste"
+        android:layout_marginTop="64sp"
+        />
+
+</LinearLayout>
