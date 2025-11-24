@@ -2,4 +2,5 @@
 <resources>
     <color name="fundo">#FF000000</color>
     <color name="contraste">#FFFFFFFF</color>
+    <color name="green">#08A820</color>
 </resources>
