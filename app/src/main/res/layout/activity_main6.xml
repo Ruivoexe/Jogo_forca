@@ -1,51 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <!-- BOTÃO SAIR -->
     <Button
         android:id="@+id/btnSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sair"
         android:padding="8dp"
-        android:backgroundTint="@color/contraste"
         android:textColor="@color/fundo"
+        android:backgroundTint="@color/contraste"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <!-- CABEÇA -->
     <ImageView
         android:id="@+id/cabeca"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/head"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <!-- CORPO -->
     <ImageView
         android:id="@+id/corpo"
         android:layout_width="20dp"
         android:layout_height="140dp"
         android:background="@drawable/body"
         app:layout_constraintTop_toBottomOf="@id/cabeca"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <!-- BRAÇO ESQUERDO -->
     <ImageView
         android:id="@+id/braco_esq"
         android:layout_width="90dp"
@@ -53,12 +44,10 @@
         android:background="@drawable/arm"
         android:rotation="330"
         app:layout_constraintTop_toTopOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@id/corpo"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="20dp" />
 
-
-    <!-- BRAÇO DIREITO -->
     <ImageView
         android:id="@+id/braco_dir"
         android:layout_width="90dp"
@@ -66,12 +55,10 @@
         android:background="@drawable/arm"
         android:rotation="30"
         app:layout_constraintTop_toTopOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@id/corpo"
-        android:layout_marginStart="16dp" />
+        android:layout_marginStart="20dp" />
 
-
-    <!-- PERNA ESQUERDA -->
     <ImageView
         android:id="@+id/perna_esq"
         android:layout_width="25dp"
@@ -79,12 +66,10 @@
         android:background="@drawable/leg"
         android:rotation="30"
         app:layout_constraintTop_toBottomOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@id/corpo"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="25dp" />
 
-
-    <!-- PERNA DIREITA -->
     <ImageView
         android:id="@+id/perna_dir"
         android:layout_width="25dp"
@@ -92,66 +77,63 @@
         android:background="@drawable/leg"
         android:rotation="330"
         app:layout_constraintTop_toBottomOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@id/corpo"
-        android:layout_marginStart="20dp" />
+        android:layout_marginStart="25dp" />
 
-
-    <!-- PALAVRA / QUESTÃO -->
     <TextView
         android:id="@+id/tv_palavra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/quest1"
+        android:text="@string/quest5"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:gravity="center"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/perna_dir"
-        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <!-- BOTÕES DAS ALTERNATIVAS -->
     <LinearLayout
         android:id="@+id/lin_buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/tv_palavra"
         android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_palavra"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnA"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SS"
+            android:text="Alan Turing"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="18sp"/>
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btnB"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ç"
+            android:text="Quentin Tarantino"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="22sp"
+            android:textSize="10sp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp" />
 
         <Button
             android:id="@+id/btnC"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Z"
+            android:text="Stalin"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="22sp"/>
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
