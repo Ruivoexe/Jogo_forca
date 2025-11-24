@@ -28,6 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnSair = findViewById(R.id.btnSair);
         btnSair.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity2.this,MainActivity.class);
+
             startActivity(intent);
             finish();
         });
@@ -46,10 +47,11 @@ public class MainActivity2 extends AppCompatActivity {
     private void respostaCerta(Button botao)
     {
         botao.setBackgroundColor(Color.GREEN);
-
+        pontos++;
         new Handler().postDelayed(()->{
             botao.setBackgroundTintList(null);
             Intent intent = new Intent(MainActivity2.this,MainActivity3.class);
+            intent.putExtra("pontosAtuais",pontos);
             startActivity(intent);
             finish();
         },500);
@@ -62,6 +64,7 @@ public class MainActivity2 extends AppCompatActivity {
         new Handler().postDelayed(()->{
             botao.setBackgroundTintList(null);
             Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+            intent.putExtra("pontosAtuais",pontos);
             startActivity(intent);
             finish();
         },500);
