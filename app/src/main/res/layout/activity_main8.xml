@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/fundo"
     android:padding="24dp">
-
-    <TextView
-        android:id="@+id/tvResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pontuação Final"
-        android:textSize="36sp"
-        android:textColor="@color/contraste"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
 
     <TextView
         android:id="@+id/tvPontos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pontos: 0"
-        android:textSize="28sp"
+        android:text="Acertos: 0"
+        android:textSize="32sp"
         android:textColor="@color/contraste"
         android:layout_marginBottom="16dp"/>
 
@@ -32,19 +21,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Erros: 0"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textColor="@color/contraste"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="32dp"/>
 
+    <Button
+        android:id="@+id/btnRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Ranking"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="@color/contraste"
+        android:textColor="@color/fundo"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btnSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Menu"
-        android:textColor="@color/fundo"
-        android:backgroundTint="@color/contraste"
+        android:textSize="20sp"
         android:padding="12dp"
-        android:textSize="20sp"/>
+        android:backgroundTint="@color/contraste"
+        android:textColor="@color/fundo"/>
 
 </LinearLayout>
