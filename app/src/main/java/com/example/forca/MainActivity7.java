@@ -81,7 +81,7 @@ public class MainActivity7 extends AppCompatActivity {
 
     private void irParaResultado() {
 
-        Intent intent = new Intent(MainActivity7.this, MainActivity.class);
+        Intent intent = new Intent(MainActivity7.this, MainActivity8.class);
         intent.putExtra("pontosAtuais", pontos);
         intent.putExtra("errosAtuais", erros);
         startActivity(intent);
