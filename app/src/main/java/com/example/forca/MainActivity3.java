@@ -7,69 +7,80 @@ import android.os.Handler;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity3 extends AppCompatActivity {
 
     Button btnSair, btnA, btnB, btnC;
-    ImageView corpo;
-    int pontos=0;
+
+    ImageView cabeca, tronco;
+
+    int pontos = 0;
+    int erros = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main3);
-        pontos = getIntent().getIntExtra("pontosAtuais",0);
+
+
+        pontos = getIntent().getIntExtra("pontosAtuais", 0);
+        erros = getIntent().getIntExtra("errosAtuais", 0);
 
         btnSair = findViewById(R.id.btnSair);
-        btnSair.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity3.this,MainActivity.class);
-
-            startActivity(intent);
-            finish();
-        });
-
         btnA = findViewById(R.id.btnA);
         btnB = findViewById(R.id.btnB);
         btnC = findViewById(R.id.btnC);
-        corpo = findViewById(R.id.corpo);
+
+
+        cabeca = findViewById(R.id.cabeca);
+        tronco = findViewById(R.id.corpo);
+
+        aplicarErros();
 
         btnA.setOnClickListener(v -> respostaErrada(btnA));
-        btnB.setOnClickListener(v -> respostaCerta(btnB));
-        btnC.setOnClickListener(v -> respostaErrada(btnC));
+        btnB.setOnClickListener(v -> respostaErrada(btnB));
+        btnC.setOnClickListener(v -> respostaCerta(btnC));
 
+        btnSair.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity3.this, MainActivity.class));
+            finish();
+        });
     }
 
-    private void respostaCerta(Button botao)
-    {
+    private void aplicarErros() {
+        if (erros >= 1) cabeca.setColorFilter(Color.RED);
+        if (erros >= 2) tronco.setColorFilter(Color.RED);
+    }
+
+    private void respostaCerta(Button botao) {
         botao.setBackgroundColor(Color.GREEN);
         pontos++;
-        new Handler().postDelayed(()->{
-            botao.setBackgroundColor(Color.TRANSPARENT);
-            Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
-            intent.putExtra("pontosAtuais",pontos);
+
+        new Handler().postDelayed(() -> {
+            botao.setBackgroundTintList(null);
+            Intent intent = new Intent(MainActivity3.this, MainActivity4.class);
+            intent.putExtra("pontosAtuais", pontos);
+            intent.putExtra("errosAtuais", erros);
             startActivity(intent);
             finish();
-        },500);
+        }, 500);
     }
 
     private void respostaErrada(Button botao) {
         botao.setBackgroundColor(Color.RED);
-        corpo.setColorFilter(Color.RED);
+        erros++;
 
-        new Handler().postDelayed(()->{
-            botao.setBackgroundColor(Color.TRANSPARENT);
+        if (erros == 1) cabeca.setColorFilter(Color.RED);
+        if (erros == 2) tronco.setColorFilter(Color.RED);
+
+        new Handler().postDelayed(() -> {
+            botao.setBackgroundTintList(null);
             Intent intent = new Intent(MainActivity3.this, MainActivity4.class);
-            intent.putExtra("pontosAtuais",pontos);
+            intent.putExtra("pontosAtuais", pontos);
+            intent.putExtra("errosAtuais", erros);
             startActivity(intent);
             finish();
-        },500);
+        }, 500);
     }
-
-
 }

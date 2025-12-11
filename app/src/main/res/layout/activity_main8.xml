@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
-
 
     <Button
         android:id="@+id/btnSair"
@@ -13,26 +10,22 @@
         android:layout_height="wrap_content"
         android:text="Sair"
         android:padding="8dp"
-        android:backgroundTint="@color/contraste"
         android:textColor="@color/fundo"
+        android:backgroundTint="@color/contraste"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/cabeca"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/head"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/corpo"
@@ -40,11 +33,9 @@
         android:layout_height="140dp"
         android:src="@drawable/body"
         app:layout_constraintTop_toBottomOf="@id/cabeca"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/braco_esq"
@@ -53,11 +44,9 @@
         android:src="@drawable/arm"
         android:rotation="330"
         app:layout_constraintTop_toTopOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@id/corpo"
-        android:layout_marginEnd="16dp" />
-
-
+        android:layout_marginEnd="20dp" />
 
     <ImageView
         android:id="@+id/braco_dir"
@@ -66,11 +55,9 @@
         android:src="@drawable/arm"
         android:rotation="30"
         app:layout_constraintTop_toTopOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@id/corpo"
-        android:layout_marginStart="16dp" />
-
-
+        android:layout_marginStart="20dp" />
 
     <ImageView
         android:id="@+id/perna_esq"
@@ -79,11 +66,9 @@
         android:src="@drawable/leg"
         android:rotation="30"
         app:layout_constraintTop_toBottomOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@id/corpo"
-        android:layout_marginEnd="20dp" />
-
-
+        android:layout_marginEnd="25dp" />
 
     <ImageView
         android:id="@+id/perna_dir"
@@ -92,25 +77,22 @@
         android:src="@drawable/leg"
         android:rotation="330"
         app:layout_constraintTop_toBottomOf="@id/corpo"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@id/corpo"
-        android:layout_marginStart="20dp" />
-
-
+        android:layout_marginStart="25dp" />
 
     <TextView
         android:id="@+id/tv_palavra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/quest1"
+        android:text="@string/points"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:gravity="center"
+        android:layout_marginTop="60dp"
         app:layout_constraintTop_toBottomOf="@id/perna_dir"
-        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <LinearLayout
@@ -119,39 +101,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/tv_palavra"
         android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_palavra"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnA"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SS"
+            android:text="Ada Byron King"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="18sp"/>
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btnB"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ç"
+            android:text="Elizabeth II"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="22sp"
+            android:textSize="12sp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp" />
 
         <Button
             android:id="@+id/btnC"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Z"
+            android:text="Anita Garibaldi"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
-            android:textSize="22sp"/>
+            android:textSize="12sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
