@@ -109,7 +109,7 @@
             android:id="@+id/btnA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:text="3"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
             android:textSize="22sp" />
@@ -129,7 +129,7 @@
             android:id="@+id/btnC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"
+            android:text="4"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
             android:textSize="22sp" />
