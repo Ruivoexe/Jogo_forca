@@ -136,7 +136,7 @@
             android:id="@+id/btnB"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:text="Á"
+            android:text="Â"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
             android:textSize="22sp"
@@ -147,7 +147,7 @@
             android:id="@+id/btnC"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:text="Â"
+            android:text="Á"
             android:textColor="@color/fundo"
             android:backgroundTint="@color/contraste"
             android:textSize="22sp"/>
